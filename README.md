@@ -27,9 +27,7 @@ console. In the console, enter
 var element = document.createElement('div')
 ```
 
-Type `element.` (or whatever you named your new element), and explore the
-properties available. It's an existing DOM element, but it doesn't yet appear in
-the DOM.
+Type `element.` (or whatever you named your new element). It's an existing DOM element, but it doesn't yet appear in the DOM.
 
 We can set properties on it:
 
@@ -47,9 +45,10 @@ the page. What gives?
 ## Append Elements into the DOM
 
 To get an element to appear in the DOM, we have to append it to an existing DOM
-node. We can start as high up on the tree as `document.body`, or we can find a
-more specific element using any of the techniques we've learned for traversing
-the DOM.
+node. To go back to our tree metaphor, we have to glue our new leaf onto a
+branch that's already there. We can start as high up on the tree as
+`document.body`, or we can find a more specific element using any of the
+techniques we've learned for traversing the DOM.
 
 ### `appendChild()`
 
