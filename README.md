@@ -140,7 +140,7 @@ You can:
 
 To create even richer experiences we can build on this foundation by:
 
-1. Learning more about (*trumpets*) The JavaScript Programming Language
+1. Learning more about (*cue the trumpets*) The JavaScript Programming Language
 2. Learning to set *events* that trigger DOM manipulation behavior.
 
 As a taste of what lies ahead, open a new tab and try pasting this into the
