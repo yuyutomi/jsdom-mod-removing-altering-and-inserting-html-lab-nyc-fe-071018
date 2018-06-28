@@ -2,15 +2,22 @@
 
 ## Problem Statement
 
-We can find and select nodes in the DOM. But now we want to do more. What if we
-need to create or insert a new element, or remove one? We need a box of
-JavaScript tools that will help us out.
+Here we are at our last component of learning JavaScript DOM programming.
+
+1. Ask the DOM to find or "select" an HTML element or elements in the rendered page
+2. Remove the selected element(s) or insert a new element (and / or)
+3. Adjust a property of the selected element(s)
+
+We've come to understand the DOM and have powerful tools for selecting the
+right elements. We now want to understand creating new nodes, deleting nodes,
+and updating nodes' properties.
 
 ## Objectives
 
 1. Create DOM elements programmatically
 2. Append elements in the DOM
-3. Remove elements from the DOM
+3. Change properties on DOM nodes
+4. Remove elements from the DOM
 
 ## Create DOM Elements Programmatically
 
@@ -27,20 +34,7 @@ console. In the console, enter
 var element = document.createElement('div')
 ```
 
-Type `element.` (or whatever you named your new element). It's an existing DOM element, but it doesn't yet appear in the DOM.
-
-We can set properties on it:
-
-``` javascript
-element.innerHTML = 'Hello, DOM!'
-element.style.backgroundColor = '#f9f9f9';
-```
-
-Feel free to set as many properties as you'd like — this is a good chance to
-look around and explore different properties of DOM elements!
-
-But notice that no matter what properties we add, the element doesn't show up on
-the page. What gives?
+The element doesn't show up on the page. What gives?
 
 ## Append Elements into the DOM
 
@@ -58,16 +52,9 @@ Let's append `element` to `body` to start:
 document.body.appendChild(element)
 ```
 
-If you've been following along, you should see `"Hello, DOM!"` on the page now
-(and it should have a light gray background).
+If you've been following along, you should see `"Hello, DOM!"` on the page now.
 
 We can continue to update `element`, since we have a reference to it:
-
-``` javascript
-element.style.textAlign = 'center';
-```
-
-And now our element's text is centered.
 
 We can append elements to that element:
 
@@ -83,19 +70,38 @@ for (let i = 0; i < 3; i++) {
 element.appendChild(ul)
 ```
 
-Hm, that looks a bit ugly. Let's fix it
+## Change Properties On DOM Nodes
+
+We can change properties on DOM Nodes to change their appearance.
 
 ``` javascript
+element.innerHTML = 'Hello, DOM!'
+element.style.backgroundColor = '#f9f9f9';
+```
+
+Ka-bam! You've changed what's on the screen!
+
+Feel free to set as many properties as you'd like — this is a good chance to
+look around and explore different properties of DOM elements!
+
+Let's adjust the display:
+
+``` javascript
+element.style.textAlign = 'center';
 ul.style.textAlign = 'left'
 ```
 
-That's better.
+That's better!
 
 ## Remove Elements from the DOM
 
 Now let's remove one of those `li`s.
 
 ### `removeChild()`
+
+Let's really use the power of `querySelector` _and_ method chaining.
+The `removeChild()` method requires us to find a parent and tell it to remove
+its already-found child:
 
 ``` javascript
 ul.removeChild(ul.querySelector('li:nth-child(2)'))
@@ -124,6 +130,50 @@ And it's gone!
 
 ## Conclusion
 
-We learned how to create, append and remove elements in the DOM with JavaScript.
+We learned how to create, append and remove elements in the DOM with JavaScript. What's amazing about this is that you now understand "DOM programming with JavaScript."
 
-<p class='util--hide'>View <a href='https://learn.co/lessons/creating-and-inserting-dom-nodes'>Creating And Inserting Nodes</a> on Learn.co and start learning to code for free.</p>
+You can:
+
+1. Ask the DOM to find or "select" an HTML element or elements in the rendered page
+2. Remove the selected element(s) or insert a new element (and / or)
+3. Adjust a property of the selected element(s)
+
+To create even richer experiences we can build on this foundation by:
+
+1. Learning more about (*trumpets*) The JavaScript Programming Language
+2. Learning to set *events* that trigger DOM manipulation behavior.
+
+As a taste of what lies ahead, open a new tab and try pasting this into the
+DevTools Console.
+
+```javascript
+let myName = "Byron the Poodle";
+let colors = [
+  "red", "orange", "yellow",
+  "blue", "green", "indigo",
+  "violet"
+];
+let updateFrequency = 500;
+
+let body = document.getElementsByTagName("body")[0];
+
+let currColor = colors[0];
+let colorPost = 0;
+
+let newHeader = document.createElement("h1");
+newHeader.innerText = myName;
+body.appendChild(newHeader);
+
+setInterval( function() {
+
+  if (colorPost > colors.length)  {
+    colorPost = 0;
+  }
+
+  newHeader.style.color = colors[colorPost];
+  colorPost++;
+}, updateFrequency);
+```
+
+You should be able to grasp what's going on here and even be able to make some
+fun edits!  Good luck on your continued exploration of JavaScript!
