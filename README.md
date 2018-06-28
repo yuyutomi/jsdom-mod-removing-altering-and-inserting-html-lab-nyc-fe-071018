@@ -144,7 +144,8 @@ To create even richer experiences we can build on this foundation by:
 2. Learning to set *events* that trigger DOM manipulation behavior.
 
 As a taste of what lies ahead, open a new tab and try pasting this into the
-DevTools Console.
+DevTools Console and pressing Enter. You might have to scroll, but you should
+see the contents of `myName` on the page, cycling through colors!
 
 ```javascript
 let myName = "Byron the Poodle";
