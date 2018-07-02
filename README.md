@@ -121,16 +121,23 @@ ul.remove()
 
 And it's gone!
 
-## Resources
+## Moving On
 
-- [document.createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
-- [appendChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
-- [removeChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild)
-- [element.remove()](https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove)
+In this lab you must edit the included `index.js` file.
+
+* Add an H1 with `id` of `victory` programmatically, using JavaScript. Inside
+  the tag you should put "(your name) is the champion!"
+* Remove the `main` element.
+
+Inside `index.js`, you'll see JavaScript comments telling you where to put the
+code. Run the tests with `learn`. When they pass, use `learn submit` to move
+on! Congratulations.
 
 ## Conclusion
 
-We learned how to create, append and remove elements in the DOM with JavaScript. What's amazing about this is that you now understand "DOM programming with JavaScript."
+We learned how to create, append and remove elements in the DOM with
+JavaScript. What's amazing about this is that you now understand "DOM
+programming with JavaScript."
 
 You can:
 
@@ -178,3 +185,10 @@ setInterval( function() {
 
 You should be able to grasp what's going on here and even be able to make some
 fun edits!  Good luck on your continued exploration of JavaScript!
+
+## Resources
+
+- [document.createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
+- [appendChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
+- [removeChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild)
+- [element.remove()](https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove)
