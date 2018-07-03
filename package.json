@@ -1,7 +1,7 @@
 {
-  "name": "js-lab-template",
+  "name": "jsdom-mod-removing-altering-and-inserting-html-lab",
   "version": "1.0.0",
-  "description": "A JavaScript lab for generating secure passwords",
+  "description": "A JavaScript lab testing basic DOM manipulation",
   "main": "index.js",
   "scripts": {
     "test": "mocha -R mocha-multi --reporter-options nyan=-,json=.results.json"
