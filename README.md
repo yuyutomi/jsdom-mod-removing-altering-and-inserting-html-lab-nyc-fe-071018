@@ -52,8 +52,6 @@ Let's append `element` to `body` to start:
 document.body.appendChild(element)
 ```
 
-If you've been following along, you should see `"Hello, DOM!"` on the page now.
-
 We can continue to update `element`, since we have a reference to it:
 
 We can append elements to that element:
