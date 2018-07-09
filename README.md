@@ -52,8 +52,6 @@ Let's append `element` to `body` to start:
 document.body.appendChild(element)
 ```
 
-If you've been following along, you should see `"Hello, DOM!"` on the page now.
-
 We can continue to update `element`, since we have a reference to it:
 
 We can append elements to that element:
@@ -76,7 +74,7 @@ We can change properties on DOM Nodes to change their appearance.
 
 ``` javascript
 element.innerHTML = 'Hello, DOM!'
-element.style.backgroundColor = '#f9f9f9';
+element.style.backgroundColor = '#ff0090';
 ```
 
 Ka-bam! You've changed what's on the screen!
@@ -125,9 +123,9 @@ And it's gone!
 
 In this lab you must edit the included `index.js` file.
 
+* Remove the `main` element.
 * Add an H1 with `id` of `victory` programmatically, using JavaScript. Inside
   the tag you should put "(your name) is the champion!"
-* Remove the `main` element.
 
 Inside `index.js`, you'll see JavaScript comments telling you where to put the
 code. Run the tests with `learn`. When they pass, use `learn submit` to move
