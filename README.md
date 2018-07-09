@@ -74,7 +74,7 @@ We can change properties on DOM Nodes to change their appearance.
 
 ``` javascript
 element.innerHTML = 'Hello, DOM!'
-element.style.backgroundColor = '#f9f9f9';
+element.style.backgroundColor = '#ff0090';
 ```
 
 Ka-bam! You've changed what's on the screen!
